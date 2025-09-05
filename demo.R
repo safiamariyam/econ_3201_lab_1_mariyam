@@ -4,7 +4,8 @@ install.packages("ggplot2")
 install.packages("dplyr")
 library(ggplot2)
 library(dplyr)
-# Calculate the average highway mpg for each class of vehicle
+#library is used to call the package and let R know you need to use it. 
+# Calculate the average highway mpg (miles per gallon) for each class of vehicle
 avg_mpg <- mpg %>%
   group_by(class) %>%
   summarise(avg_hwy_mpg = mean(hwy, na.rm = TRUE))
